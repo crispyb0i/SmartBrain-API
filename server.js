@@ -25,10 +25,6 @@ app.use(bodyParser.json())
 
 app.use(cors())
 
-app.get('/', (req,res)=>{
-  res.send(database.users)
-})
-
 app.post('/signin',(req,res) => {
   db.select('email','hash').from('login')
     .where('email', '=', req.body.email)
@@ -104,6 +100,6 @@ app.put('/image', (req,res) => {
   .catch(err => res.status(400).json('unable to get entries'))
 })
 
-app.listen(3000, () => {
-  console.log('app is running on port 3000')
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`app is running on port ${process.env.PORT}`)
 })

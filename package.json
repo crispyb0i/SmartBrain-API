@@ -15,7 +15,7 @@
     "clarify": "^2.1.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
-    "knex": "^0.21.2",
+    "knex": "^2.4.0",
     "pg": "^8.0.3"
   },
   "devDependencies": {
